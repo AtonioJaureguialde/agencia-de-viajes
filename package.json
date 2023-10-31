@@ -1,0 +1,30 @@
+{
+  "name": "54-agencia-viajes-node",
+  "version": "1.0.0",
+  "description": "Web de agencia de viajes utilizando Node y Express",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node.js",
+    "express",
+    "HTML",
+    "javaScript",
+    "CSS",
+    "Bootstrap"
+  ],
+  "type": "module",
+  "author": "Antonio Garcia",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mysql2": "^3.6.2",
+    "pug": "^3.0.2",
+    "sequelize": "^6.33.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

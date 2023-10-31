@@ -1,0 +1,34 @@
+extends ./layout/index
+
+block contenido
+    main.container.mt-5 
+        h1.text-center.mt-5 #{pagina}
+
+        //p= JSON.stringify(opinionesRenderizadas)
+
+        blockquote.text-center    Lee sobre nuestros clientes y sus experiencias
+        include ./layout/bloque_opiniones
+
+
+        .row 
+            .col-md-12
+                h2.d-block.w-100.text-center Agrega una Valoración
+
+                if(errores)
+                    each error in errores
+                        .alert.col.alert-danger.text-center=error.mensaje
+
+            .row.justify-content-center.col
+                .col-md-8    
+                    form(action="/testimonials" method="POST")
+                        .form-group     
+                            label(for="nombre") Nombre
+                            input#nombre(class="form-control" type="text", placeholder="Escribe aquí tu nombre", name="nombre", value=nombre)
+                        .form-group     
+                            label(for="correo") Correo
+                            input#correo(class="form-control" type="email", placeholder="Escribe aquí tu correo", name="correo", value=correo)
+                        .form-group     
+                            label(for="mensaje") Mensaje
+                            textarea#mensaje(class="form-control" type="text", placeholder="Escribe aquí tu mensaje", name="mensaje", cols="100", rows="5")=mensaje
+
+                        input.btn.btn-success.btn-block(type="submit")

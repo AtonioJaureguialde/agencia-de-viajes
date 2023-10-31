@@ -1,0 +1,33 @@
+extends ./layout/index
+
+block slider
+    .slider
+        h1 Rio de Janeiro 
+        em aventura
+
+block contenido
+    main.container.mt-5 
+        h2.text-center.mb-5 Sobre Nosotros
+        .row.mb-5 
+            .col-md-6 
+                p Bienvenido a nuestra agencia de viajes. Con más de una década de experiencia en la industria, somos reconocidos por nuestra profesionalidad y dedicación inquebrantable a hacer realidad los sueños de nuestros clientes. Al elegirnos, confías en una agencia que prioriza tu satisfacción y bienestar en cada viaje que emprendes.
+                p En nuestra agencia de viajes, la excelencia es nuestra norma. Creemos que los viajes transformadores y enriquecedores no deben ser un lujo inalcanzable. Nos enorgullecemos de ser una opción económica sin comprometer la calidad del servicio que brindamos.
+            .col-md-6
+                img(class="img-fluid mt-2" src="/img/inicio_nosotros.jpg", alt="imagen nosotros")
+        //p= JSON.stringify(viajesInicio)
+        h2.text-center.mb-5 Nuestros viajes
+        include ./layout/bloque_viajes
+
+    .descuento.mt-4
+        .container
+            .row
+                .col-md-6
+                    .contenido  
+                        h3 5% de descuento
+                        p.titulo Viaje a Canadá
+                        p.fecha 20 de Marzo de 2024 -- 30 de Marzo de 2024
+                        p.precio 2500 €
+
+    .container
+        h2.text-center.mt-5.mb-5 Opiniones
+        include ./layout/bloque_opiniones
