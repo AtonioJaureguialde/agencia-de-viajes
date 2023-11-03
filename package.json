@@ -4,7 +4,8 @@
   "description": "Web de agencia de viajes utilizando Node y Express",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "start" : "node index.js"
   },
   "keywords": [
     "node.js",
